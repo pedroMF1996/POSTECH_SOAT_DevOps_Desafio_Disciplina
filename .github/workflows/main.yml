@@ -27,7 +27,7 @@ jobs:
           distribution: 'adopt'
           package: '*.jar'
       - name: Publish package
-        run: mvn --batch-mode deploy
+        run: mvn --batch-mode deploy -DaltDeploymentRepository=github::default::https://maven.pkg.github.com/pedrofalleiros/minha-lib
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
